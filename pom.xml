@@ -16,6 +16,12 @@
     <url>https://travis-ci.org/github/nerdynick/commons-configuration-vault</url>
   </ciManagement>
 
+  <scm>
+		<url>https://github.com/nerdynick/commons-configuration-vault</url>
+		<connection>scm:git:ssh://git@github.com/nerdynick/commons-configuration-vault.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/nerdynick/commons-configuration-vault.git</developerConnection>
+	</scm>
+
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
