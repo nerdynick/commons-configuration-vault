@@ -26,6 +26,7 @@ public class VaultLookup implements Lookup {
     @Override
     public Object lookup(final String variable) {
         final String[] parts = variable.split(":", 2);
+        LOG.debug("Looking up: {} `{}`", variable, parts);
         if (parts.length == 2) {
             try {
                 final Map<String, String> data = client.logical().read(parts[0]).getData();

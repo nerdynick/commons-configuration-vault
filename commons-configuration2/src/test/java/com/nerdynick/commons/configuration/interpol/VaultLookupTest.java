@@ -41,5 +41,19 @@ public class VaultLookupTest {
         assertEquals("value1", configs.getString("value.1"));
         assertEquals("value2", configs.getString("value.2"));
     }
+
+    // @Test
+    // public void IntegrationTest() throws VaultException {
+    //     final Vault vault = new Vault(new VaultConfig()
+    //         .address("http://localhost:8200")
+    //         .token("s.nsR6pSTzShZ5iH0dRyiRFq29")
+    //         .build());
+
+    //     final MapConfiguration configs = new MapConfiguration(new HashMap<>());
+    //     configs.getInterpolator().registerLookup("vault", new VaultLookup(vault));
+    //     configs.addProperty("value.1", "${vault:secret/example:data.1}");
+
+    //     assertEquals("value.1", configs.getString("value.1"));
+    // }
 }
     
