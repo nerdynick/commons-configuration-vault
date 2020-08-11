@@ -4,7 +4,7 @@
 
   <groupId>com.nerdynick</groupId>
   <artifactId>commons-configuration-vault-parent</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>commons-configuration-vault-parent</name>
@@ -20,7 +20,7 @@
 		<url>https://github.com/nerdynick/commons-configuration-vault</url>
 		<connection>scm:git:ssh://git@github.com/nerdynick/commons-configuration-vault.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/nerdynick/commons-configuration-vault.git</developerConnection>
-	  <tag>commons-configuration-vault-parent-1.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 
   <licenses>

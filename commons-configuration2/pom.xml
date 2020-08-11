@@ -4,12 +4,12 @@
   <parent>
     <artifactId>commons-configuration-vault-parent</artifactId>
     <groupId>com.nerdynick</groupId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
   </parent>
   
   <groupId>com.nerdynick</groupId>
   <artifactId>commons-configuration2-vault</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
 
   <name>commons-configuration2-vault</name>
   <description>Hashicorp Vault integration for Apache Commons Configuration 2</description>
