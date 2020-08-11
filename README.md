@@ -32,11 +32,8 @@ final Vault myVault = new Vault(new VaultConfig()
     .token("my-token")
     .build());
 
-final Map<String, Lookup> lookups = new HashMap<>();
-lookups.put("vault", new VaultLookup(vault));
-
 final MapConfiguration configs = new MapConfiguration(new HashMap<>());
-configs.setPrefixLookups(lookups);
+configs.getInterpolator().registerLookup("vault", new VaultLookup(vault));
 ```
 
 See [Vault Java Driver](https://github.com/BetterCloud/vault-java-driver) docs for more examples and details on how to create the Vault Client.

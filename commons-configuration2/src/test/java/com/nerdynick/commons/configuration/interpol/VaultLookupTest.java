@@ -11,7 +11,6 @@ import com.bettercloud.vault.api.Logical;
 import com.bettercloud.vault.response.LogicalResponse;
 
 import org.apache.commons.configuration2.MapConfiguration;
-import org.apache.commons.configuration2.interpol.Lookup;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -34,11 +33,8 @@ public class VaultLookupTest {
         Mockito.when(response1.getData()).thenReturn(map1);
         Mockito.when(response2.getData()).thenReturn(map2);
 
-        final Map<String, Lookup> lookups = new HashMap<>();
-        lookups.put("vault", new VaultLookup(vault));
-
         final MapConfiguration configs = new MapConfiguration(new HashMap<>());
-        configs.setPrefixLookups(lookups);
+        configs.getInterpolator().registerLookup("vault", new VaultLookup(vault));
         configs.addProperty("value.1", "${vault:test/1:test}");
         configs.addProperty("value.2", "${vault:test/2:test}");
 
