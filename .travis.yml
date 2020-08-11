@@ -8,4 +8,5 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t jacoco
+  - ./cc-test-reporter format-coverage target/site/jacoco-aggregate/jacoco.xml --input-type jacoco
+  - ./cc-test-reporter upload-coverage
